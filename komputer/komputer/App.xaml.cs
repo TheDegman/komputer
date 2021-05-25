@@ -10,7 +10,8 @@ namespace komputer
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new amdMaster());
+            
         }
 
         protected override void OnStart()

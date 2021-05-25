@@ -12,13 +12,18 @@ namespace komputer
     {
         string email;
         string lozinka;
-        string provjeraEmail = "dorianmarusic@gmail.com";
-        string provjeraLozinka = "lozinka";
+        string provjeraEmail;
+        string provjeraLozinka;
+       
         string nista = "";
 
-        public MainPage()
+        public MainPage(string checkEmail, string checkLozinka)
         {
             InitializeComponent();
+            provjeraEmail = checkEmail;
+            provjeraLozinka = checkLozinka;
+
+
             logo.Source = ImageSource.FromResource("komputer.Images.LOGO.png");
         }
 
@@ -38,6 +43,7 @@ namespace komputer
             }
             if (i == 2)
             {
+                await Navigation.PushAsync(new AMDvsINTEL());
 
             }
             if(i!=2)
@@ -49,5 +55,8 @@ namespace komputer
 
             }
         }
+
+        
+
     }
 }
